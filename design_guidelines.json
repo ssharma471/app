@@ -1,0 +1,169 @@
+{
+  "identity": {
+    "persona": "E1: The Anti-AI Designer",
+    "mission": "Create a premium, emotionally directed eCommerce experience that feels like a mix of Apple, Glossier, and Muji. Avoid generic templates.",
+    "principles": [
+      "Fusion over Imitation",
+      "Emotion First",
+      "Content is King",
+      "Zoom In (Intimacy)",
+      "Negative Space (Luxury)"
+    ]
+  },
+  "project_info": {
+    "name": "Beautivra",
+    "tagline": "Everyday Beauty, Elevated",
+    "description": "Modern, minimal, premium beauty & self-care essentials brand focused on high-quality tools and accessories.",
+    "target_audience": "Women and men 18-45, aesthetic-focused, wellness-oriented.",
+    "key_vibe": "Minimal, Clean, Premium, Elegant, Soft, Tactile."
+  },
+  "design_system": {
+    "typography": {
+      "strategy": "The Old Money Tech (Classic Serif Head + Sterile Mono/Sans Body)",
+      "headings": {
+        "font_family": "Playfair Display, serif",
+        "weights": ["400", "600"],
+        "usage": "All section titles, hero text, product names. Use tight tracking (-0.02em).",
+        "fallback": "serif"
+      },
+      "body": {
+        "font_family": "Manrope, sans-serif",
+        "weights": ["300", "400", "500"],
+        "usage": "Descriptions, UI elements, buttons, navigation.",
+        "fallback": "sans-serif"
+      },
+      "accents": {
+        "font_family": "JetBrains Mono, monospace",
+        "usage": "Price tags, technical specs, small labels (optional for 'Muji' feel)."
+      }
+    },
+    "colors": {
+      "palette_name": "Organic & Earthy (Soft Luxury)",
+      "backgrounds": {
+        "main": "#F9F8F6",
+        "secondary": "#F2EFE9",
+        "card": "#FFFFFF",
+        "dark": "#1A1A1A"
+      },
+      "text": {
+        "primary": "#1A1A1A",
+        "secondary": "#5A5A5A",
+        "muted": "#8C8C8C",
+        "inverse": "#F9F8F6"
+      },
+      "accents": {
+        "primary": "#1A1A1A",
+        "highlight": "#D4AF37",
+        "soft_highlight": "#E6D5B8",
+        "error": "#D32F2F",
+        "success": "#388E3C"
+      }
+    },
+    "spacing": {
+      "scale": "Generous. Use p-8, p-12, p-16 for section padding.",
+      "grid_gap": "gap-8 or gap-12 for marketing, gap-4 for product grids."
+    },
+    "visual_enhancers": {
+      "radius": "rounded-none (Muji style) or rounded-lg (Apple style). Decision: rounded-sm (2px-4px) for a sharp, premium feel.",
+      "shadows": "shadow-sm for cards, shadow-xl for floating elements. Avoid heavy drop shadows.",
+      "borders": "1px solid #E5E5E5. Use border-b for grid items to create a 'technical' look."
+    }
+  },
+  "assets": {
+    "images": {
+      "hero": [
+        {
+          "url": "https://images.pexels.com/photos/7796746/pexels-photo-7796746.jpeg",
+          "alt": "Aesthetic beauty tools flatlay",
+          "usage": "Main Hero Background or Split Layout"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1573248303663-37d7a727a4bf",
+          "alt": "Brushes in cup",
+          "usage": "About Us or Philosophy Section"
+        }
+      ],
+      "lifestyle": [
+        {
+          "url": "https://images.pexels.com/photos/7208722/pexels-photo-7208722.jpeg",
+          "alt": "Woman using face roller",
+          "usage": "Product Benefit Section / Homepage Feature"
+        },
+        {
+          "url": "https://images.pexels.com/photos/3785802/pexels-photo-3785802.jpeg",
+          "alt": "Skincare routine",
+          "usage": "Instagram Gallery / Blog"
+        }
+      ],
+      "products": [
+        {
+          "url": "https://images.pexels.com/photos/6621434/pexels-photo-6621434.jpeg",
+          "alt": "Gua Sha Stone",
+          "usage": "Product Card / Featured Product"
+        },
+        {
+          "url": "https://images.pexels.com/photos/5928035/pexels-photo-5928035.jpeg",
+          "alt": "Beauty Tools on Marble",
+          "usage": "Shop Page Header"
+        }
+      ]
+    },
+    "icons": {
+      "primary_library": "lucide-react",
+      "style": "Stroke width 1.5px (Thin/Elegant).",
+      "usage": "Navigation, Features, Cart."
+    }
+  },
+  "layout_strategies": {
+    "marketing_pages": {
+      "grid_system": "Mode A: The Tetris Grid. Asymmetrical layouts for 'Why Beautivra'.",
+      "hero_section": "Split screen (Text Left, Image Right) OR Full-screen immersive image with centered typography.",
+      "typography_scale": "Headings: text-5xl to text-7xl. Body: text-lg."
+    },
+    "ecommerce_pages": {
+      "product_grid": "Clean, 2-column on mobile, 4-column on desktop. Minimalist cards (Image + Name + Price). No 'Add to Cart' button clutter on grid.",
+      "product_detail": "Sticky info on right, scrollable gallery on left. Large, high-res images.",
+      "cart": "Slide-out drawer (Sheet component) or clean dedicated page."
+    }
+  },
+  "components": {
+    "header": {
+      "style": "Sticky, glassmorphism (backdrop-blur-md, bg-white/80). Minimal height.",
+      "elements": "Logo (Serif), Nav Links (Hidden on mobile), Icons (Search, Cart, User)."
+    },
+    "buttons": {
+      "primary": "Solid Black (#1A1A1A), White Text, Sharp corners or slightly rounded (rounded-sm). Hover: Scale 1.02.",
+      "secondary": "Outline Black, Transparent BG. Hover: bg-black/5."
+    },
+    "cards": {
+      "product": "No border, no shadow. Image aspect ratio 4:5 (Portrait). Text below image, left aligned.",
+      "feature": "Bento grid style. Light gray background (#F2EFE9) with centered content."
+    },
+    "footer": {
+      "style": "Dark Mode (#1A1A1A bg, #F9F8F6 text). Massive padding (py-20).",
+      "content": "Newsletter signup (prominent), Links columns, Social icons."
+    }
+  },
+  "tech_stack": {
+    "frontend": "React, Tailwind CSS, Shadcn UI",
+    "backend": "FastAPI, MongoDB",
+    "payments": "Stripe"
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Add '@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap');' to index.css.",
+    "2. CONFIGURE TAILWIND: Update tailwind.config.js to include the new font families and color palette.",
+    "3. BUILD LAYOUTS: Start with the Homepage using the 'Tetris Grid' for the 'Why Beautivra' section.",
+    "4. USE IMAGES: Use the provided Pexels/Unsplash URLs. Do not use placeholders.",
+    "5. SHADCN: Customize Shadcn components (Buttons, Inputs, Sheets) to match the 'Soft Luxury' aesthetic (remove default rounded-md, use rounded-sm).",
+    "6. ANIMATION: Add 'framer-motion' for subtle fade-ins on scroll. No aggressive bouncing.",
+    "7. DATA-TESTID: Add data-testid to all interactive elements (e.g., 'add-to-cart-btn', 'nav-link-shop')."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop': No generic centered layouts, no default blue/purple gradients.",
+    "Dark colors must be solid, not gradients.",
+    "Use 2-3x more spacing than typical.",
+    "Micro-animations are mandatory (hover, focus, active).",
+    "Never use emoji icons. Use Lucide icons.",
+    "Toasts must use 'sonner'."
+  ]
+}
